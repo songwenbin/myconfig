@@ -11,7 +11,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'taglist.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'mileszs/ack.vim'
+Plugin 'wesleyche/srcexpl'
+Plugin 'fatih/vim-go'
+Plugin 'a.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -37,3 +42,28 @@ filetype plugin indent on    " required
 "
 
 source ~/.vim/gtags.vim
+
+" go config
+"au FileType go nmap <leader>r <Plug>(go-run)
+"au FileType go nmap <leader>b <Plug>(go-build)
+"au FileType go nmap <leader>t <Plug>(go-test)
+"au FileType go nmap <leader>c <Plug>(go-coverage)
+
+"au FileType go nmap <Leader>ds <Plug>(go-def-split)
+"au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+"au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+"let g:go_highlight_functions = 1
+"let g:go_highlight_methods = 1
+"let g:go_highlight_structs = 1
+"let g:go_highlight_operators = 1
+"let g:go_highlight_build_constraints = 1
+
+"au FileType go nmap <Leader>s <Plug>(go-implements)
+"au FileType go nmap <Leader>i <Plug>(go-info)
+
+" key map
+let mapleader=";"
+map <F2> :TagbarToggle<CR>
+map <F3> :NERDTreeToggle<CR>
+map <F4> :SrcExplToggle<CR>

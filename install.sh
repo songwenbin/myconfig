@@ -26,3 +26,12 @@ sudo make install
 cd ../..
 cp global/gtags.vim ~/.vim
 
+#install ack
+mkdir -p ~/bin
+curl http://beyondgrep.com/ack-2.14-single-file > ~/bin/ack && chmod 0755 !#:3
+
+# remote connect
+sudo apt-get install openssh-server
+
+# make menuconfig
+sudo apt-get install ncurses-dev
